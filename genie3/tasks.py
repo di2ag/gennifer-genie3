@@ -11,7 +11,7 @@ celery.conf.result_backend = os.environ.get("CELERY_RESULT_BACKEND", "redis://lo
 celery.conf.task_routes = {"create_genie3_task": {"queue": 'genie3'}}
 
 @celery.task(name="create_genie3_task")
-def create_pidc_task(zenodo_id):
+def create_genie3_task(zenodo_id):
     inputs = generateInputs(zenodo_id)
     res = run(inputs)
     output = parseOutput(res)
