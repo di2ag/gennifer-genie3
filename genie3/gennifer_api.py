@@ -32,7 +32,7 @@ def run(tempUniqueDirPath):
     '''
     outPath = tempUniqueDirPath + '/outFile.txt'
 
-    cmdToRun = ' '.join(['python runArboreto.py --algo=GENIE3', tempUniqueDirPath + "/ConvertedExpressionData.csv", outPath])
+    cmdToRun = ' '.join(['python runArboreto.py --algo=GENIE3', '--inFile=' + tempUniqueDirPath + "/ConvertedExpressionData.csv", '--outFile=' + outPath])
     os.system(cmdToRun)
 
     return tempUniqueDirPath
